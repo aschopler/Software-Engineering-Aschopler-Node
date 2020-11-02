@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+
+<!--
+Name: Alec Schopler
+Instructor: Prof. Pogue
+Class: Software Engineering
+Date: 21 September 2020
+Description: This is the html code for the dice-roller webapp.
+-->
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/dice-roller.js"></script>
+    <title>Dice Roller</title>
+</head>
+<body onload="RollSixSidedDice()">
+    <h1> - Dice Roller - </h1>
+
+    <div class="navbar">
+      <a href="index.handlebars">Home</a>
+      <a href="https://github.com/aschopler/Software-Engineering-Aschopler" target="_blank">GitHub</a>
+      <div class="dropdown">
+        <button class="dropbtn">Sprint 1
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="my-favorite-hobby.handlebars">My Favorite Hobby</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Sprint 2
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="dice-roller.handlebars">Dice Roller</a>
+          <a href="syllabus.handlebars">Course Syllabus</a>
+          <a href="regexp.handlebars">RegExp Tester</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Sprint 3
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">  
+          <a href="https://software-engineering-helloworld-node-aps.azurewebsites.net/" target="_blank">Hello World! (Node.js)</a>
+        </div>
+      </div>
+    </div>
+
+
+    <h2> > Dice roller program < </h2>
+
+    <p>Follow the instructions in the fields below:</p>
+
+    <p2>How many sides does the dice have?</p2><input id="diceSides" type="dice_text" value="6" size="5"><br>
+    <p2>How many dice do you want to roll?</p2><input id="diceNum" type="dice_text" value="1" size="5"><br><br>
+
+    <button type="button" onclick="RollSixSidedDice()" autofocus>Roll Dice</button><br>
+
+    <p><strong>Dice rolling results:</strong><br>---------------------------</p>
+    <p id="diceResultsID"></p>
+    <br><br>
+
+</body>
+</html>

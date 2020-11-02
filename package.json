@@ -1,0 +1,24 @@
+{
+  "name": "nodepersonal",
+  "version": "1.0.0",
+  "description": "Landing for Software Engineering",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aschopler/Software-Engineering-Aschopler-Node.git"
+  },
+  "author": "lou petrongelli",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aschopler/Software-Engineering-Aschopler-Node/issues"
+  },
+  "homepage": "https://github.com/aschopler/Software-Engineering-Aschopler-Node#readme"
+}

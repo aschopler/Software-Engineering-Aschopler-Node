@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+
+<!--
+Name: Alec Schopler
+Instructor: Prof. Pogue
+Class: Software Engineering
+Date: 23 September 2020
+Description: This is the regexp tester application
+-->
+
+<head>
+    <link rel="stylesheet" href="/css/landing.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>RegExp Tester</title>
+
+    <script>
+        function RegExpTest() {
+            // Gathering input from user
+            var test_word = document.getElementById("test_word").value;
+            var reg_exp = document.getElementById("reg_exp").value;
+            
+            // Convert to string
+            test_word = String(test_word);
+            
+            // Generating reg exp
+            var regex = new RegExp(reg_exp);
+
+            // Testing regex against test word
+            var test = regex.test(test_word);
+
+            // Error checking user input prior to reporting regex
+            if (test_word === "" && reg_exp === "") {
+                document.getElementById("result").value = "Invalid: Can you work with me here! Be nice. >:)" 
+            } else if (test_word === "") {
+                document.getElementById("result").value = "Invalid: Please enter a word or string"
+            } else if (reg_exp === "" )  {
+                document.getElementById("result").value = "Invalid: Please enter a regular expression"
+            } else {
+                document.getElementById("result").value = test;
+            }             
+        }
+    </script>
+
+</head>
+<body>
+    <h1> - RegExp Tester - </h1>
+
+    <div class="navbar">
+      <a href="index.handlebars">Home</a>
+      <a href="https://github.com/aschopler/Software-Engineering-Aschopler" target="_blank">GitHub</a>
+      <div class="dropdown">
+        <button class="dropbtn">Sprint 1
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="my-favorite-hobby.handlebars">My Favorite Hobby</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Sprint 2
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="dice-roller.handlebars">Dice Roller</a>
+          <a href="syllabus.handlebars">Course Syllabus</a>
+          <a href="regexp.handlebars">RegExp Tester</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Sprint 3
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">  
+          <a href="https://software-engineering-helloworld-node-aps.azurewebsites.net/" target="_blank">Hello World! (Node.js)</a>
+        </div>
+      </div>
+    </div>
+
+    <h2> > Regular Expression Tester < </h2><br><br>
+    <div class="regex_container">
+        <div class="regex_field">
+            <form>
+            <label>Insert a word or string:</label><br>
+            <input id="test_word" type="regex_text" size="5" autofocus><br><br>
+            <label>Insert a regular expression:</label><br>
+            <input id="reg_exp" type="regex_text" size="5"><br><br>
+            <label>Regex results:</label><br>
+            <input id="result" type="regex_text" size="5" disabled><br><br><br>
+            <div class="regex_button_container">
+                <div class="regex_button_left">
+                    <button type="button" class="button" onclick="RegExpTest()">Check Regex</button>
+                </div>
+                <div class="regex_button_right">
+                    <button type="reset">Clear Fields</button>
+                </div>
+            </div>
+            <br><br><br><br><br><br>
+            </form>
+        </div>
+    </div>
+     
+</body>
+</html>
