@@ -11,7 +11,7 @@ Description: This is the landing page to my website.
 -->
 
 <head>
-    <link rel="stylesheet" href="/css/landing.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>SE Index</title>
 </head>
@@ -19,14 +19,23 @@ Description: This is the landing page to my website.
     <h1> - Home - </h1>
 
     <div class="navbar">
-      <a href="index.handlebars">Home</a>
-      <a href="https://github.com/aschopler/Software-Engineering-Aschopler" target="_blank">GitHub</a>
+      <a href="/">Home</a>
+      <a href="https://software-engineering-aps.azurewebsites.net/index.html" target="_blank">Azure Site</a>
+      <div class="dropdown">
+        <button class="dropbtn">GitHub
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="https://github.com/aschopler/Software-Engineering-Aschopler" target="_blank">Azure GitHub</a>
+          <a href="https://github.com/aschopler/Software-Engineering-Aschopler-Node" target="_blank">Azure Node GitHub</a>
+        </div>
+      </div>    
       <div class="dropdown">
         <button class="dropbtn">Sprint 1
           <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
-          <a href="my-favorite-hobby.handlebars">My Favorite Hobby</a>
+          <a href="/my-favorite-hobby">My Favorite Hobby</a>
         </div>
       </div>
       <div class="dropdown">
@@ -34,9 +43,9 @@ Description: This is the landing page to my website.
           <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
-          <a href="dice-roller.handlebars">Dice Roller</a>
-          <a href="syllabus.handlebars">Course Syllabus</a>
-          <a href="regexp.handlebars">RegExp Tester</a>
+          <a href="/dice-roller">Dice Roller</a>
+          <a href="/syllabus">Course Syllabus</a>
+          <a href="/regexp">RegExp Tester</a>
         </div>
       </div>
       <div class="dropdown">
@@ -48,6 +57,7 @@ Description: This is the landing page to my website.
         </div>
       </div>
     </div>
+
 
     <h2> > Welcome to my landing page! < </h2><br>
     <p2>Use the navbar above to find my assignments for each sprint.</p2><br><br>

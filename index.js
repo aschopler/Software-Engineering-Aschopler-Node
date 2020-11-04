@@ -13,11 +13,11 @@ app.use(express.static(__dirname + '/public'))
 
 const port = process.env.PORT || 3000
 
-app.get('/', (req, res) => res.render('home'))
+app.get('/', (req, res) => res.render('index'))
 
-app.get('/index', (req, res) => res.render('index'))
-app.get('/my-favorite-hobby', (req, res) => res.render('myfavoritehobby'))
-app.get('/dice-roller', (req, res) => res.render('diceroll'))
+// app.get('/index', (req, res) => res.render('index'))
+app.get('/my-favorite-hobby', (req, res) => res.render('my-favorite-hobby'))
+app.get('/dice-roller', (req, res) => res.render('dice-roller'))
 app.get('/syllabus', (req, res) => res.render('syllabus'))
 app.get('/regexp', (req, res) => res.render('regexp'))
 
